@@ -1,0 +1,343 @@
+@font-face {
+    font-family: louis;
+    src: url(font/Louis\ George\ Cafe\ Light.ttf);
+}
+
+@font-face {
+    font-family: louis2;
+    src: url(font/Louis\ George\ Cafe.ttf);
+}
+
+/* -----------------------------------------------HEADER------------------------------------------------------ */
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    overflow: hidden; /* Asegura que el video no se desborde */
+}
+
+#header-video {
+    width: 100%;
+    height: auto; /* Para mantener la proporción del video */
+    min-height: 100%; /* Para evitar que el video desaparezca */
+    object-fit: cover; /* Escala el video para que cubra todo el contenedor */
+}
+
+button#collection-btn {
+    font-family: louis2;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1; /* Asegura que el botón esté por encima del video */
+}
+
+/* Define los estilos CSS para el video del encabezado cuando la pantalla sea más pequeña */
+@media screen and (max-width: 768px) {
+    #header-video source:nth-of-type(1) {
+        display: none; /* Oculta el video principal en pantallas más pequeñas */
+    }
+}
+
+/* Define los estilos CSS para el video del encabezado cuando la pantalla sea más grande */
+@media screen and (min-width: 769px) {
+    #header-video source:nth-of-type(2) {
+        display: none; /* Oculta el video pequeño en pantallas más grandes */
+    }
+}
+
+/* -----------------------------------------------------------NAVBAR-------------------------------------------------- */
+
+/* Estilos iniciales del navbar */
+.navbar {
+    position: fixed; /* Navbar fijo en la parte superior */
+    top: 0; /* Asegura que el navbar esté en la parte superior */
+    left: 0;
+    width: 100%;
+    padding: 10px 0; /* Espaciado interno arriba y abajo */
+    transition: background-color 0.3s ease, padding 0.3s ease; /* Transición suave de color de fondo y espaciado */
+    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+}
+
+/* Estilos para el navbar transparente */
+.navbar.transparent {
+    background-color: transparent; /* Fondo transparente */
+    padding: 20px 0; /* Espaciado interno adicional para navbar transparente */
+}
+
+/* Estilos para el navbar con fondo blanco */
+.navbar.white-bg {
+    background-color: white;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1); /* Agrega un borde inferior gris */
+}
+
+
+/* Contenedor dentro del navbar */
+.navbar .container {
+    display: flex; /* Usa flexbox para organizar elementos */
+    justify-content: space-between; /* Espacio uniforme entre elementos */
+    align-items: center; /* Centra elementos verticalmente */
+}
+
+/* Estilo para el logo */
+/* Estilo del logo en el navbar */
+.navbar .logo {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    font-family: louis; /* Cambia 'TuFuentePersonalizada' por el nombre de la fuente que desees utilizar */
+    margin-left: 20px;
+}
+
+
+/* Estilos para los enlaces del navbar */
+.nav-links {
+    display: flex; /* Usa flexbox para organizar elementos */
+    align-items: center; /* Centra elementos verticalmente */
+    list-style: none; /* Quita los estilos de la lista */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el relleno */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav-links li {
+    margin-left: 20px; /* Espacio entre elementos */
+}
+
+.nav-links li:first-child {
+    margin-left: 0; /* Elimina el margen izquierdo del primer elemento */
+}
+
+.nav-links li a {
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilos para los logos dentro del navbar */
+.navbar .nav-links li a img {
+    width: 30px; /* Ancho deseado para los logos */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+/* Estilo del texto del logo en el navbar transparente */
+.navbar.transparent .logo-text {
+    color: white; /* Cambia el color del texto del logo a blanco */
+}
+
+/* Estilo del texto del logo en el navbar con fondo blanco */
+.navbar.white-bg .logo-text {
+    color: black; /* Cambia el color del texto del logo a negro */
+}
+
+.navbar .nav-links li a img {
+    /* Otros estilos... */
+    margin-left: 5px; /* Agrega espacio a la izquierda de los logos */
+    margin-right: 5px; /* Agrega espacio a la derecha de los logos */
+}
+
+
+/* -----------------------------------------------------------IMAGENES-------------------------------------------------- */
+
+.image-grid {
+    padding: 20px;
+}
+
+.grid-title {
+    font-size: 24px;
+    font-family: louis2;
+    margin-top: 0;
+    text-align: center;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.grid-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.grid-item {
+    text-align: center;
+    margin: 10px;
+    flex: 1 0 20%; /* Establece que cada elemento ocupe el 20% del ancho disponible */
+}
+
+.grid-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+
+}
+
+.image-text {
+    text-align: center;
+    font-size: 14px;
+    font-family: louis;
+}
+
+/* -----------------------------------------------------------BANNER-------------------------------------------------- */
+
+.section-banner {
+    text-align: center;
+    font-family: louis2;
+}
+
+.banner-video {
+    width: 100%; /* El video ocupa todo el ancho de la página */
+    max-height: auto;
+}
+
+/* -----------------------------------------------------------PRODUCTOS-------------------------------------------------- */
+
+.product-section-2 {
+    display: grid; /* Cambiado a grid para un mejor control de la disposición */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Definición de columnas autoajustables */
+    grid-gap: 15px; /* Espacio entre los productos */
+    margin-top: 40px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+/* Estilo para cada producto en la sección 2 */
+.product-2 {
+    position: relative;
+}
+
+
+.product-image-2 img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+
+.product-details-2 {
+    bottom: -40px; /* Ajusta la distancia entre la imagen y el precio según sea necesario */
+    left: 0;
+    width: 100%;
+    text-align: center; /* Centra el precio horizontalmente */
+    padding: 10px;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    transition: transform 0.3s ease;
+}
+
+.product-2:hover .product-details-2 {
+    transform: translateY(0);
+}
+
+.product-details-2 h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.product-details-2 p {
+    font-family: louis2;
+    margin: px 0 0;
+    font-size: 15px;
+}
+
+
+/* -----------------------------------------------------------SERVICIOS-------------------------------------------------- */
+
+.service-section {
+    margin: 50px auto;
+    text-align: center;
+    font-family: louis2;
+}
+
+/* Utilizamos flexbox para los elementos de servicio */
+.service-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos uniformemente a lo largo del contenedor */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas */
+}
+
+/* Estilo para cada elemento de servicio */
+.service-item {
+    width: calc(33.33% - 20px); /* Ancho de cada elemento en una fila */
+    margin: 0 10px; /* Espacio horizontal entre los elementos */
+    text-align: center;
+}
+
+/* Estilo para el video dentro de cada elemento de servicio */
+.service-item video {
+    width: 100%; /* Ajusta el ancho del video al 100% del contenedor */
+    height: auto; /* Altura automática para mantener la proporción original */
+}
+
+/* Estilo para el texto debajo del video */
+.service-item h3,
+.service-item p {
+    margin-top: 10px; /* Espacio entre el video y el texto */
+}
+
+/* Media query para dispositivos más pequeños */
+@media screen and (max-width: 768px) {
+    .service-item {
+        width: calc(50% - 20px); /* Ancho de cada elemento en una fila */
+    }
+}
+
+/* Media query para dispositivos aún más pequeños */
+@media screen and (max-width: 480px) {
+    .service-item {
+        width: calc(100% - 20px); /* Ancho de cada elemento en una fila */
+        margin: 0 auto 20px; /* Centro los elementos y agrega espacio inferior */
+    }
+}
+
+/* -----------------------------------------------------------FOOTER-------------------------------------------------- */
+
+/* Estilos CSS para el footer */
+.footer {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding: 40px 0; /* Espaciado interno */
+    display: flex; /* Utiliza flexbox para organizar los elementos */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+}
+
+/* Estilos CSS para las secciones del footer */
+.footer .footer-content .footer-section {
+    flex: 1; /* Cada sección del footer ocupará el mismo espacio disponible */
+    margin-right: 20px; /* Espaciado entre las secciones del footer */
+    display: flex; /* Utiliza flexbox para organizar los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+/* Estilos CSS para los enlaces en el footer */
+.footer a {
+    color: #fff; /* Enlaces en color blanco */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilos CSS para los enlaces en el hover */
+.footer a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.footer-bottom {
+    font-family: louis2;
+}

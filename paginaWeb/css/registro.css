@@ -1,0 +1,321 @@
+@font-face {
+    font-family: louis;
+    src: url(font/Louis\ George\ Cafe\ Light.ttf);
+}
+
+@font-face {
+    font-family: louis2;
+    src: url(font/Louis\ George\ Cafe.ttf);
+}
+
+
+html, body {
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el relleno por defecto */
+    border: none; /* Elimina cualquier borde por defecto */
+    overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+}
+
+/* -----------------------------------------------------------NAVBAR-------------------------------------------------- */
+
+
+.navbar {
+    position: fixed; /* Navbar fijo en la parte superior */
+    top: 0; /* Asegura que el navbar esté en la parte superior */
+    left: 0;
+    width: 100%;
+    padding: 10px 0; /* Espaciado interno arriba y abajo */
+    transition: background-color 0.3s ease, padding 0.3s ease; /* Transición suave de color de fondo y espaciado */
+    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+}
+
+/* Estilos para el navbar transparente */
+.navbar.transparent {
+    background-color: transparent; /* Fondo transparente */
+    padding: 20px 0; /* Espaciado interno adicional para navbar transparente */
+}
+
+/* Estilos para el navbar con fondo blanco */
+.navbar.white-bg {
+    background-color: white;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1); /* Agrega un borde inferior gris */
+}
+
+
+/* Contenedor dentro del navbar */
+.navbar .container {
+    display: flex; /* Usa flexbox para organizar elementos */
+    justify-content: space-between; /* Espacio uniforme entre elementos */
+    align-items: center; /* Centra elementos verticalmente */
+}
+
+/* Estilo para el logo */
+/* Estilo del logo en el navbar */
+.navbar .logo {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    font-family: louis; /* Cambia 'TuFuentePersonalizada' por el nombre de la fuente que desees utilizar */
+    margin-left: 20px;
+}
+
+
+/* Estilos para los enlaces del navbar */
+.nav-links {
+    display: flex; /* Usa flexbox para organizar elementos */
+    align-items: center; /* Centra elementos verticalmente */
+    list-style: none; /* Quita los estilos de la lista */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el relleno */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav-links li {
+    margin-left: 20px; /* Espacio entre elementos */
+}
+
+.nav-links li:first-child {
+    margin-left: 0; /* Elimina el margen izquierdo del primer elemento */
+}
+
+.nav-links li a {
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilos para los logos dentro del navbar */
+.navbar .nav-links li a img {
+    width: 30px; /* Ancho deseado para los logos */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+/* Estilo del texto del logo en el navbar transparente */
+.navbar.transparent .logo-text {
+    color: white; /* Cambia el color del texto del logo a blanco */
+}
+
+/* Estilo del texto del logo en el navbar con fondo blanco */
+.navbar.white-bg .logo-text {
+    color: black; /* Cambia el color del texto del logo a negro */
+}
+
+.navbar .nav-links li a img {
+    /* Otros estilos... */
+    margin-left: 5px; /* Agrega espacio a la izquierda de los logos */
+    margin-right: 5px; /* Agrega espacio a la derecha de los logos */
+}
+
+
+/* -----------------------------------------------------------REGISTRO-------------------------------------------------- */
+
+
+/* Estilos CSS para el formulario de inicio de sesión y registro */
+
+.login-form,
+.registration-form {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 130px;
+}
+
+.login-form h2,
+.registration-form h2 {
+    margin-bottom: 20px;
+    font-family: louis;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: louis2;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.alternate-section {
+    font-family: louis2;
+}
+
+/* ------------------------------------BOTONES-------------------------------------- */
+
+.login-form button,
+.registration-form button {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    background-color: #161616; /* Color de fondo gris */
+    color: #ffffff; /* Color del texto negro */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+    /* Estilos adicionales para hacerlo más estiloso */
+    margin-top: 20px; /* Agregar espacio entre el formulario y el botón */
+    font-family: louis2;
+}
+
+.login-form button:hover,
+.registration-form button:hover {
+    background-color: #000; /* Cambia el color de fondo a negro al pasar el mouse */
+    color: #fff; /* Cambia el color del texto a blanco al pasar el mouse */
+}
+
+
+
+
+
+/* Otros estilos... */
+
+.alternate-section {
+    margin-top: 20px;
+}
+
+.alternate-section p {
+    margin-bottom: 10px;
+}
+
+.alternate-section a {
+    color: #000000;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.alternate-section a:hover {
+    color: #000000;
+}
+
+.social-buttons {
+    margin-top: 20px; /* Espacio por encima de los botones */
+    display: flex;
+    flex-direction: column; /* Apila los botones verticalmente */
+}
+
+.login-form .google-button, .login-form .apple-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #000; /* Borde negro */
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Letras negras */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 10px; /* Espacio entre los botones */
+}
+
+.login-form .google-button img, .login-form .apple-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.registration-form .google-button, .registration-form .apple-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #000; /* Borde negro */
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Letras negras */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 10px; /* Espacio entre los botones */
+}
+
+.registration-form .google-button img, .registration-form .apple-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Botones de Google y Apple al pasar el mouse sobre ellos */
+.social-buttons .google-button:hover,
+.social-buttons .apple-button:hover {
+    background-color: #fff; /* Mantener el fondo blanco */
+    color: #000; /* Mantener el color del texto negro */
+}
+
+/* -----------------------------------------------------------BENEFICIOS-------------------------------------------------- */
+
+/* Estilos para los beneficios */
+.benefits {
+    text-align: center; /* Centra el contenido horizontalmente */
+    margin-top: 50px; /* Espacio superior */
+}
+
+.benefits h2 {
+    font-size: 24px;
+    font-family: louis2; /* Tamaño del título */
+}
+
+.benefits-list {
+    display: flex; /* Usa flexbox para organizar los beneficios en línea */
+    justify-content: space-around; /* Espacio uniforme entre los beneficios */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.benefit-item {
+    width: 200px; /* Ancho de cada beneficio */
+}
+
+.benefit-item h3 {
+    font-size: 18px; /* Tamaño del texto del beneficio */
+    margin-bottom: 10px; /* Espacio inferior */
+    font-family: louis2;
+}
+
+.benefit-item p {
+    font-family: louis;
+}
+
+/* -----------------------------------------------------------FOOTER-------------------------------------------------- */
+
+/* Estilos CSS para el footer */
+.footer {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding: 40px 0; /* Espaciado interno */
+    display: flex; /* Utiliza flexbox para organizar los elementos */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+}
+
+/* Estilos CSS para las secciones del footer */
+.footer .footer-content .footer-section {
+    flex: 1; /* Cada sección del footer ocupará el mismo espacio disponible */
+    margin-right: 20px; /* Espaciado entre las secciones del footer */
+    display: flex; /* Utiliza flexbox para organizar los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+/* Estilos CSS para los enlaces en el footer */
+.footer a {
+    color: #fff; /* Enlaces en color blanco */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilos CSS para los enlaces en el hover */
+.footer a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.footer-bottom {
+    font-family: louis2;
+}

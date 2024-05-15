@@ -1,0 +1,181 @@
+@font-face {
+    font-family: louis;
+    src: url(font/Louis\ George\ Cafe\ Light.ttf);
+}
+
+@font-face {
+    font-family: louis2;
+    src: url(font/Louis\ George\ Cafe.ttf);
+}
+
+html, body {
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el relleno por defecto */
+    border: none; /* Elimina cualquier borde por defecto */
+    overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+}
+
+/* -----------------------------------------------------------NAVBAR-------------------------------------------------- */
+
+
+.navbar {
+    position: fixed; /* Navbar fijo en la parte superior */
+    top: 0; /* Asegura que el navbar esté en la parte superior */
+    left: 0;
+    width: 100%;
+    padding: 10px 0; /* Espaciado interno arriba y abajo */
+    transition: background-color 0.3s ease, padding 0.3s ease; /* Transición suave de color de fondo y espaciado */
+    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+}
+
+/* Estilos para el navbar transparente */
+.navbar.transparent {
+    background-color: transparent; /* Fondo transparente */
+    padding: 20px 0; /* Espaciado interno adicional para navbar transparente */
+}
+
+/* Estilos para el navbar con fondo blanco */
+.navbar.white-bg {
+    background-color: white;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1); /* Agrega un borde inferior gris */
+}
+
+
+/* Contenedor dentro del navbar */
+.navbar .container {
+    display: flex; /* Usa flexbox para organizar elementos */
+    justify-content: space-between; /* Espacio uniforme entre elementos */
+    align-items: center; /* Centra elementos verticalmente */
+}
+
+/* Estilo para el logo */
+/* Estilo del logo en el navbar */
+.navbar .logo {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    font-family: louis; /* Cambia 'TuFuentePersonalizada' por el nombre de la fuente que desees utilizar */
+    margin-left: 20px;
+}
+
+
+/* Estilos para los enlaces del navbar */
+.nav-links {
+    display: flex; /* Usa flexbox para organizar elementos */
+    align-items: center; /* Centra elementos verticalmente */
+    list-style: none; /* Quita los estilos de la lista */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el relleno */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav-links li {
+    margin-left: 20px; /* Espacio entre elementos */
+}
+
+.nav-links li:first-child {
+    margin-left: 0; /* Elimina el margen izquierdo del primer elemento */
+}
+
+.nav-links li a {
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilos para los logos dentro del navbar */
+.navbar .nav-links li a img {
+    width: 30px; /* Ancho deseado para los logos */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+/* Estilo del texto del logo en el navbar transparente */
+.navbar.transparent .logo-text {
+    color: white; /* Cambia el color del texto del logo a blanco */
+}
+
+/* Estilo del texto del logo en el navbar con fondo blanco */
+.navbar.white-bg .logo-text {
+    color: black; /* Cambia el color del texto del logo a negro */
+}
+
+.navbar .nav-links li a img {
+    /* Otros estilos... */
+    margin-left: 5px; /* Agrega espacio a la izquierda de los logos */
+    margin-right: 5px; /* Agrega espacio a la derecha de los logos */
+}
+
+/* -----------------------------------------------------------BANNER-------------------------------------------------- */
+
+.banner {
+    background-image: url('bannergucci.jpg'); /* Ruta de tu imagen */
+    background-size: cover; /* Cubre toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    height: 50vh; /* Altura igual al 50% del tamaño de la ventana del navegador */
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 70vh; /* Altura igual al 70% del tamaño de la ventana del navegador en dispositivos con una anchura máxima de 768px */
+    }
+}
+
+
+
+
+/* Estilos para el contenedor del contenido */
+.acerca {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    padding: 50px 20px; /* Ajusta el espaciado interior */
+    text-align: center; /* Centra el texto */
+}
+
+/* -----------------------------------------------------------ACERCA-------------------------------------------------- */
+
+.acerca h2 {
+    font-family: louis;
+    font-size: 30px;
+}
+
+.acerca p {
+    font-family: louis;
+    font-size: 20px;
+}
+
+/* -----------------------------------------------------------FOOTER-------------------------------------------------- */
+
+/* Estilos CSS para el footer */
+.footer {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding: 40px 0; /* Espaciado interno */
+    display: flex; /* Utiliza flexbox para organizar los elementos */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+}
+
+/* Estilos CSS para las secciones del footer */
+.footer .footer-content .footer-section {
+    flex: 1; /* Cada sección del footer ocupará el mismo espacio disponible */
+    margin-right: 20px; /* Espaciado entre las secciones del footer */
+    display: flex; /* Utiliza flexbox para organizar los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+/* Estilos CSS para los enlaces en el footer */
+.footer a {
+    color: #fff; /* Enlaces en color blanco */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilos CSS para los enlaces en el hover */
+.footer a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.footer-bottom {
+    font-family: louis2;
+}
